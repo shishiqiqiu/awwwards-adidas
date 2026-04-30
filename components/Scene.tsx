@@ -1,0 +1,33 @@
+import { ShirtType } from "@/lib/textures";
+import { View } from "@react-three/drei";
+import { FirstWhiteModel } from "./FirstWhiteModel";
+import { FirstGrayModel } from "./FirstGrayModel";
+import { FirstSportModel } from "./FirstSportModel";
+import { SecondModel } from "./SecondModel";
+
+type Props = {
+  shirtType: ShirtType;
+};
+const Scene = ({ shirtType }: Props) => {
+  return (
+    <main className="min-h-screen">
+      <section id="first-section" className="h-screen">
+        <View className="w-dvw h-dvh">
+          {shirtType === "white" && <FirstWhiteModel />}
+          {shirtType === "sport" && <FirstSportModel />}
+          {shirtType === "gray" && <FirstGrayModel />}
+        </View>
+      </section>
+      <section id="second-section" className="h-screen">
+        <View className="w-dvw h-dvh">
+          <SecondModel shirtType={shirtType} />
+        </View>
+      </section>
+      {/* <section id="third-section" className="h-screen">
+        <View className="w-dvw h-dvh"></View>
+      </section> */}
+    </main>
+  );
+};
+
+export default Scene;
