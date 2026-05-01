@@ -2,10 +2,9 @@ import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
-import { serialize } from "v8";
 
 const MusicStreamLine = ({ color }: { color: string }) => {
-  const [isPlay, setIsPlay] = useState(false);
+  const [isPlay, setIsPlay] = useState(true);
   const divRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null)
 
