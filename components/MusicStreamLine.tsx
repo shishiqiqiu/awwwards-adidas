@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 
 const MusicStreamLine = ({ color }: { color: string }) => {
-  const [isPlay, setIsPlay] = useState(true);
+  const [isPlay, setIsPlay] = useState(false);
   const divRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null)
 
