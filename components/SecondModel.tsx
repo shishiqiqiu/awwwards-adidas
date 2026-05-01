@@ -15,6 +15,26 @@ type GLTFResult = {
   };
 };
 
+const animateTexts = (textsRef: RefObject<THREE.Group | null>) => {
+    if (!textsRef.current) return gsap.timeline();
+    const meshes = textsRef.current.children as THREE.Mesh[];
+
+    const tl = gsap.timeline();
+    meshes.forEach((mesh, i) => {
+      tl.from(
+        mesh.scale,
+        { x: 0, y: 0, z: 0, duration: 1, ease: "circ.out" },
+        i * 0.1,
+      );
+      tl.from(
+        mesh.position,
+        { y: "+=0.04", duration: 1, ease: "back.out" },
+        i * 0.1,
+      );
+    });
+    return tl;
+  };
+
 function calcWidth(nodes: { [name: string]: THREE.Mesh }, key: string) {
   const mesh = nodes[key] as THREE.Mesh;
   if (!mesh) return 0;
@@ -122,26 +142,6 @@ export function SecondModel({ shirtType }: { shirtType: ShirtType }) {
     });
   });
 
-  const animateTexts = (textsRef: RefObject<THREE.Group | null>) => {
-    if (!textsRef.current) return gsap.timeline;
-    const meshes = textsRef.current.children as THREE.Mesh[];
-
-    const tl = gsap.timeline();
-    meshes.forEach((mesh, i) => {
-      tl.from(
-        mesh.scale,
-        { x: 0, y: 0, z: 0, duration: 1, ease: "circ.out" },
-        i * 0.1,
-      );
-      tl.from(
-        mesh.position,
-        { y: "+=0.04", duration: 1, ease: "back.out" },
-        i * 0.1,
-      );
-    });
-    return tl;
-  };
-
   return (
     <group
       ref={groupRef}
@@ -192,4 +192,4 @@ export function SecondModel({ shirtType }: { shirtType: ShirtType }) {
   );
 }
 
-useGLTF.preload("/models/ShirtScrolling.glb");
+

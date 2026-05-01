@@ -30,7 +30,7 @@ export function FirstSportModel() {
   >;
 
   useFirstAnimation(groupRef, shirtRef, maskRef);
-  
+
   return (
     <group>
       <Masking ref={maskRef} />
@@ -54,4 +54,4 @@ export function FirstSportModel() {
   );
 }
 
-useGLTF.preload("/models/sport/SportStudio.glb");
+

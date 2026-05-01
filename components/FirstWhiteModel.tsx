@@ -30,7 +30,7 @@ export function FirstWhiteModel() {
   >;
 
   useFirstAnimation(groupRef, shirtRef, maskRef);
-  
+
   return (
     <group>
       <Masking ref={maskRef} />
@@ -53,4 +53,3 @@ export function FirstWhiteModel() {
   );
 }
 
-useGLTF.preload("/models/white/WhiteStudio.glb");
