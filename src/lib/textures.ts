@@ -22,7 +22,7 @@ export const studioTextures = {
         sphere: "/textures/white/second/Sphere_Env_Baked_Texture.webp",
       },
       third: {
-        normal: "/textures/FloorNormal.png",
+        normal: "/textures/FloorNormal.webp",
         overlay: "/textures/SmudgesOverlay.jpg",
         icon: "/textures/adidas.png",
       },
@@ -39,7 +39,7 @@ export const studioTextures = {
         sphere: "/textures/gray/second/Gray_Sphere_Env_Baked_Texture.webp",
       },
       third: {
-        normal: "/textures/FloorNormal.png",
+        normal: "/textures/FloorNormal.webp",
         overlay: "/textures/SmudgesOverlay.jpg",
         icon: "/textures/adidas.png",
       },
@@ -56,7 +56,7 @@ export const studioTextures = {
         sphere: "/textures/sport/second/Sport_Sphere_Env_Baked_Texture.webp",
       },
       third: {
-        normal: "/textures/FloorNormal.png",
+        normal: "/textures/FloorNormal.webp",
         overlay: "/textures/SmudgesOverlay.jpg",
         icon: "/textures/adidas.png",
       },
